@@ -1,0 +1,8 @@
+[mysqld]
+default_authentication_plugin = mysql_native_password
+server-id = 1
+log-bin = mysql-bin
+binlog-do-db = DbOficial
+binlog-ignore-db = mysql
+replicate-do-db = DbOficial
+replicate-ignore-db = mysql

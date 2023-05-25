@@ -1,0 +1,7 @@
+[mysqld]
+default_authentication_plugin = mysql_native_password
+server-id = 2
+relay-log = relay-bin
+relay-log-index = relay-bin.index
+replicate-do-db = DbOficial
+replicate-ignore-db = mysql

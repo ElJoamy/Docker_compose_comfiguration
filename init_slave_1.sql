@@ -1,0 +1,2 @@
+CHANGE MASTER TO MASTER_HOST="database_master", MASTER_USER="joseph", MASTER_PASSWORD="root";
+START SLAVE;

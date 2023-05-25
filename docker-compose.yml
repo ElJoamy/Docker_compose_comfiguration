@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  database_master:
+    image: mysql:latest
+    container_name: "database_master"
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./mysqldata_master:/var/lib/mysql
+      - ./master.cnf:/etc/my.cnf
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_LOG_CONSOLE=true
+
+  database_slave_1:
+    image: mysql:latest
+    container_name: "database_slave_1"
+    restart: always
+    depends_on:
+      - database_master
+    ports:
+      - 3307:3306
+    volumes:
+      - ./init_slave.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./mysqldata_slave_1:/var/lib/mysql
+      - ./slave1.cnf:/etc/my.cnf
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_LOG_CONSOLE=true
+
+  database_slave_2:
+    image: mysql:latest
+    container_name: "database_slave_2"
+    restart: always
+    depends_on:
+      - database_master
+    ports:
+      - 3308:3306
+    volumes:
+      - ./init_slave.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./mysqldata_slave_2:/var/lib/mysql
+      - ./slave2.cnf:/etc/my.cnf
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_LOG_CONSOLE=true
