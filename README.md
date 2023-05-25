@@ -68,7 +68,7 @@ cd Docker_compose_comfiguration
 ```
 3. Levantar el contenedor con el siguiente comando:
 ```
-docker-compose up
+docker compose up
 ```
 4. Esperar a que se levante el contenedor y se cree la base de datos.
 5. Entrar a la db de master con el siguiente comando:
