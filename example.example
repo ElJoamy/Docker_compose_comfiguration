@@ -15,8 +15,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_LOG_CONSOLE=true
-    networks:
-      - mynetwork
 
   database_slave_1:
     image: mysql:latest
@@ -34,8 +32,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_LOG_CONSOLE=true
-    networks:
-      - mynetwork
 
   database_slave_2:
     image: mysql:latest
@@ -53,9 +49,3 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_LOG_CONSOLE=true
-    networks:
-      - mynetwork
-
-networks:
-  mynetwork:
-    driver: bridge
