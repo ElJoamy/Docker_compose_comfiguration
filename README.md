@@ -33,6 +33,8 @@ Para llevar a cabo una adecuada gestión de inventarios en la Facultad de Medici
 
 Al cumplir con estos requisitos y utilizar estas tablas como base, se podrá llevar a cabo una gestión eficiente de inventarios en la Facultad de Medicina, Enfermería, Nutrición y Tecnología Médica, facilitando el control de stock, la realización de compras, la asignación de recursos y el seguimiento de movimientos de artículos.
 
+Sise desea revisar mas a detalle el documento puede leer el archivo [Requisitos.pdf](./media/JLldImr2G3th.pdf) y la ficha del proceso de contratacion [Ficha.pdf](./media/23-0139-00-1326830-0-E.pdf) 
+
 ## Diagrama Propuesto de Base de Datos
 Segun los requisitos mencionados anteriormente, se propone el siguiente diagrama de base de datos para la Facultad de Medicina, Enfermería, Nutrición y Tecnología Médica:
 ![Diagrama de Base de Datos](./media/Modelo%20entidad%20relacion.png)
